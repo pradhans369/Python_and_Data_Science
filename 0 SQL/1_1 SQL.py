@@ -5,23 +5,25 @@ class Facebook:
     def __init__(self):
         # connect to the data base
         self.db = DBhelper()
-        self.menu()
+        self.start()
 
-    def menu(self):
-        user_input = input("""
-            1. Enter 1 to register
-            2. Enter 2 to login
-            3. Anything else to leave
-                           
-""")
-        
-        if user_input == "1":
-            self.register()
-        elif user_input == "2":
-            self.login()
-        else:
-            sys.exit(1000)
-
+    def start(self):
+        """Main entry point to avoid recursion."""
+        while True:
+            user_input = input("""
+                1. Enter 1 to register
+                2. Enter 2 to login
+                3. Anything else to leave
+                            
+    """)
+            
+            if user_input == "1":
+                self.register()
+            elif user_input == "2":
+                self.login()
+            else:
+                print("Exiting...")
+                sys.exit(0)
 
     def register(self):
         name = input('ENTER THE NAME : ')
@@ -30,21 +32,24 @@ class Facebook:
 
         response = self.db.register(name, email, password)
 
-        if response:
+        if response == 1:
             print("REGISTRATION SUCCESSFUL")
         else:
             print("REGISTRATION FAILED")
 
-        self.menu()
-
     def login(self):
-        # Placeholder for login logic
-        print("LOGIN FUNCTIONALITY NOT IMPLEMENTED YET")
-        self.menu()
+        email = input("ENTER EMAIL : ")
+        password = input("ENTER PASSWORD : ")
+        data = self.db.search(email, password)
+        
+        if len(data) == 0:
+            print("LOGIN FAILED: INCORRECT EMAIL OR PASSWORD")
+        else:
+            print("LOGIN SUCCESSFUL")
+            print(f"Welcome {data[0][1]}!") # Assuming Name is the second column
 
-# **********************************************************************************************************************************************
 
-obj = Facebook()
 
-# AFTER SUCCESSFULLY ADDING A NEW USER, IT WILL ADD THAT USER'S DETAILS INTO THE DATABASE AT 'phpMyAdmin'
+if __name__ == "__main__":
+    obj = Facebook()
 
