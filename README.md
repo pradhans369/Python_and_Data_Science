@@ -8,3 +8,5 @@ Folders ending with “practice” demonstrate my hands-on practice and implemen
 
 Each folder contains files arranged in a systematic numerical order, making it easy to locate specific topics or workflows.
 Feel free to explore all my repositories to see my learning process and hard work in the field of Data Science.
+
+CKECK FOLDER "0 ML lecture" FOR ALL ML TOPICS AND MODELS (RECOMMENDED).
