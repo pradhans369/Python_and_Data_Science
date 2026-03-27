@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-
+import time
 
 # Setup ChromeOptions
 options = Options()
@@ -22,21 +22,21 @@ options.add_argument("--disable-blink-features=AutomationControlled")
 options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
 # -----------------------------------------------
 
-# Tell Selenium exactly where the Brave browser is installed
+
 brave_path = r"C:\Users\biswa\AppData\Local\BraveSoftware\Brave-Browser\Application\brave.exe"
 options.binary_location = brave_path
 
-# Initialize the WebDriver using Selenium Manager (built-in)
+
 driver = webdriver.Chrome(options=options)
 
-# Navigate to a test website
-driver.get("https://www.google.com")
-
-# Typing into search bar
-input_element = driver.find_element(By.CLASS_NAME, "gLFyf")
-input_element.send_keys("Hello world", Keys.ENTER) 
-# input_element.submit()        # this also works as enter button
+driver.get("https://www.python.org")
+assert 'Python' in driver.title
 
 
-input_element = driver.find_element(By.CLASS_NAME, "zReHs")
-input_element.click()
+elem = driver.find_element(By.NAME, 'q')
+elem.clear()                # By running elem.clear() first, it acts like pressing Backspace repeatedly until the box is completely empty.
+elem.send_keys('jsighseoigjhoahs', Keys.ENTER)
+assert 'NO RESULTS FOUND' not in driver.page_source
+
+# time.sleep(5)
+# driver.close()
