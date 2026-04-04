@@ -19,6 +19,6 @@ temp.sort()
 
 print(temp)
 
-
+# limitation : the loop will stop once the shortest list ends, and ignore reset of the nums in the bigger list
 
 

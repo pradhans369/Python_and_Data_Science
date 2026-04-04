@@ -9,8 +9,9 @@ It stored two or more lists at a time
 
 names = ["Alice", "Bob", "Charlie"]
 tricks = ["Card trick", "Levitation", "Disappearing act"]
+names2 = ["Alice", "Bob", "Charlie"]
 
-zipped = zip(names, tricks)
+zipped = zip(names, tricks, names2)
 
 print(zipped)               # will show memory location
 print(list(zipped))
