@@ -5,6 +5,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 import requests
+import gzip
 
 st.set_page_config(page_title="Movie Recommendation System", layout="wide")
 
@@ -12,7 +13,7 @@ st.set_page_config(page_title="Movie Recommendation System", layout="wide")
 movies = pickle.load(open('movies.pkl','rb'))
 movies_list = movies['TITLE'].values 
 
-similarity = pickle.load(open('similarity.pkl','rb'))
+similarity = pickle.load(gzip.open('similarity.pkl.gz','rb'))
 # -------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # the API used for getting the movie posters

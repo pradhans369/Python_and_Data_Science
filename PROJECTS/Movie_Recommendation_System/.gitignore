@@ -1,6 +1,7 @@
 # Ignore massive dataset files and machine learning models
 *.csv
 *.pkl
+!movies.pkl
 
 # Ignore Jupyter Notebook checkpoints
 .ipynb_checkpoints
