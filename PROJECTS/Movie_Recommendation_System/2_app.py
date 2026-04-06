@@ -6,14 +6,17 @@ import pandas as pd
 import pickle
 import requests
 import gzip
+import os
 
 st.set_page_config(page_title="Movie Recommendation System", layout="wide")
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------
-movies = pickle.load(open('movies.pkl','rb'))
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+movies = pickle.load(open(os.path.join(script_dir, 'movies.pkl'), 'rb'))
 movies_list = movies['TITLE'].values 
 
-similarity = pickle.load(gzip.open('similarity.pkl.gz','rb'))
+similarity = pickle.load(gzip.open(os.path.join(script_dir, 'similarity.pkl.gz'), 'rb'))
 # -------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # the API used for getting the movie posters
