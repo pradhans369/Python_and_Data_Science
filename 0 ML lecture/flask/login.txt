@@ -1,0 +1,4 @@
+login page
+accepting username & project
+session store
+redirect welcome page
