@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/app.css">
+    <title>Welcome</title>
+</head>
+
+<body>
+
+    <head class="head">
+        <h2>Login Successful</h2>
+        <h4>Welcome to the world {{ name }}</h4>
+        <!-- name will the same as the parameter set in app.py while using flask-->
+    </head>
+
+    <!-- making an input button to show other details -->
+    <!-- since you can't use action="/profile" as it is only for form, we have to put the PROFILE button inside a link and set the link url to the "/profile"-->
+    <a href="/profile">
+        <input type="button" value="PROFILE" class="profile">
+    </a>
+
+    <!-- making a form for taking some more details form the user -->
+    <form action="/profile" method="POST" class="form2">
+        <h3>Are you a topper?</h3>
+
+        <!-- Both must have the EXACT SAME name="is_topper" -->
+        <input type="radio" name="is_topper" value="yes" id="choice_yes">
+        <label for="choice_yes">YES</label>
+
+        <input type="radio" name="is_topper" value="no" id="choice_no">
+        <label for="choice_no">NO</label>
+
+        <br><br>
+
+        <!-- You MUST have a submit button or the data never leaves the page! -->
+        <input type="submit" value="CHECK STATUS">
+    </form>
+
+</body>
+
+</html>

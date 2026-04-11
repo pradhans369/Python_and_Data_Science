@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/app.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <h1>ENTER YOUR DETAILS</h1>
+
+    <!-- making a function for login page -->
+    <form action="/submit" method="POST" class="form">
+        <!-- method -- states what to do, either GET (for viewing only) or POST (for getting data from user)-->
+        <!-- action -- where to send the data, a link is put here -->
+
+        <label>Username</label>
+        <!-- remember the value at the "name" must be same as the value in flask, else flask will not receive the input -->
+        <input type="text" name="username" placeholder="Enter Name" class="details username">
+        <label>E-Mail</label>
+        <input type="email" name="email" id="Enter Email" placeholder="Enter email" class="details email">
+        <label>Password</label>
+        <input type="password" name="password", placeholder="Enter Password" class="details password">
+        <input type="submit" value="LOGIN" class="details login">
+
+    </form>
+
+    
+</body>
+
+</html>

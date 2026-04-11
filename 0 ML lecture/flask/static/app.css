@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.form{
+    /* border:2px solid grey; */
+    width:45%;
+    /* gap:15px; */
+    height:20%;
+    padding:1%;
+    box-sizing: border-box;
+
+
+    display: flex;
+    flex-direction:column;
+}
+
+label{
+    margin-bottom:0;
+}
+
+.details {
+    color:black;
+    border-radius:20px;
+    height:30%;
+    width:50%;
+    text-align:center;
+    box-sizing: border-box;
+    margin-bottom:5%;
+
+}
+
+.details.login{
+    width:25%;
+
+}
