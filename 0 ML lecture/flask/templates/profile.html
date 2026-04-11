@@ -1,28 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="app.css">
-    <title>profile</title>
-</head>
-<body>
-    <h1>Hello {{name}}</h1>
+{% extends "base.html" %}
 
-    <!-- putting to conditions -->
-    {% if topper == "yes" %}
-        <b><big><p>You are a topper</p></big></b>
-    {% else %}
-        <p>You need to work</p>
-    {% endif %}
+{% block title %}Profile - {{ name }}{% endblock %}
 
-    <!-- making list of subjects -->
-    <ol>
-        <!-- making a for loop of subjects -->
-        {% for i in subjects %}
-            <li>{{ i }}</li>
-        {% endfor %}               <!--ending for loop, ENDING THE FOR LOOP IS MANDATORY-->
+{% block main %}
+<div class="profile-page">
+    <h1>Hello, {{ name }}</h1>
+
+    <div class="status-box">
+        {% if topper == "yes" %}
+            <p class="topper-msg">✅ You are a topper! Great job.</p>
+        {% else %}
+            <p class="work-msg">📚 You need to work a bit harder.</p>
+        {% endif %}
+    </div>
+
+    <h3>Your Registered Subjects:</h3>
+    <ol class="subject-list">
+        {% for subject in subjects %}
+            <li>{{ subject }}</li>
+        {% endfor %}
     </ol>
-
-</body>
-</html>
+    
+    <br>
+    <a href="/" class="back-btn">Logout</a>
+</div>
+{% endblock %}
