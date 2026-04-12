@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Session Data Checker{% endblock %}
+
+{% block main %}
+<div class="check-data-page">
+    <h2>Raw Session Memory Data</h2>
+    <p>This page shows exactly what is stored in your browser's "Locker" (Session).</p>
+
+    <table border="1" cellpadding="10" style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+        <thead style="background-color: #f2f2f2;">
+            <tr>
+                <th>Data Key (Name)</th>
+                <th>Stored Value (Data)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for key, value in data.items() %}
+            <tr>
+                <td style="font-weight: bold; color: #333;">{{ key }}</td>
+                <td style="color: #555;">{{ value }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br><br>
+    <a href="/profile" class="details login" style="text-decoration: none; display: inline-block;">BACK TO PROFILE</a>
+</div>
+{% endblock %}

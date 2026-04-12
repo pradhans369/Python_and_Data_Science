@@ -9,6 +9,20 @@
 <body>
     <h1>This is header</h1>         <!--This will show at every html page that we create which are linked to "base.html"-->
 
+    <!-- ⚡ GLOBAL FLASH MESSAGE HANDLER ⚡ -->
+    <!-- Placing this in base.html ensures flashes appear perfectly no matter what page we are redirected to! -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div style="margin: 10px 20px;">
+                {% for category, message in messages %}
+                    <p style="color: green; font-weight: bold; background-color: #e6ffe6; padding: 10px; border: 1px solid green;">
+                        {{ message }}
+                    </p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
     <div class="main-container">
         {% block main %}
             <!-- This is an example of template inheritance -->

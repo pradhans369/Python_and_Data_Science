@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Feedback from {{ name }}{% endblock %}
+
+{% block main %}
+<div class="feedback-page">
+    <h2>We value your feedback, {{ name }}!</h2>
+    
+    
+
+
+    <p>Please let us know how we are doing.</p>
+
+    {% if topper == "yes" %}
+        <h3>Name : {{ name }} | Performance : Good</h3>
+    {% else %}
+        <h3>Name : {{ name }} | Performance : Moderate</h3>
+    {% endif %}
+
+    <form action="/feedback" method="POST" class="form3">
+
+        <label>Feedback Category:</label><br>
+        <select name="category" class="details">
+            <option value="bug">Report a Bug</option>
+            <option value="feature">Suggest a Feature</option>
+            <option value="ui">Design Feedback</option>
+            <option value="other">Other</option>
+        </select>
+
+        <br><br>
+
+        <label>Your Message:</label><br>
+        <!-- Textarea is better than input for long feedback -->
+        <textarea name="message" placeholder="Type your message here..." rows="5" class="details"
+            style="width: 100%;"></textarea>
+
+        <br><br>
+
+        <input type="submit" value="SEND FEEDBACK" class="details login">
+    </form>
+</div>
+{% endblock %}
