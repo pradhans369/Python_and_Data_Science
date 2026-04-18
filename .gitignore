@@ -1,0 +1,5 @@
+# this will not upload the global environment, coz it is more than 100 mb and github donot accepts any file which is more than 100 mb
+
+global_venv/
+ashura_accessKeys.csv
+env.test

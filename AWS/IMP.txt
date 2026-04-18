@@ -1,0 +1,5 @@
+i have deleted all the buckets and the user after using the code to avoid costs and billings
+
+to use it again just create a new bucket in 'S3' and then create a policy name it whatever you want and check for what permission you want to give to the user
+
+now create a user in 'IAM' and create a key and then link all the three, and then the code will work.
