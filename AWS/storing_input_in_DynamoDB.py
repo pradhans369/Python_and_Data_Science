@@ -3,44 +3,51 @@ from dotenv import load_dotenv
 import os
 import random
 
-# 1. This loads your key ID and secret from the env.test file
+# loading the key and secret from env.test
 load_dotenv("env.test")
 
-# 2. Connect to DynamoDB in your specific region (Mumbai)
-dynamodb = boto3.resource('dynamodb',region_name='ap-south-1')
+# connecting the py to the DynamoDB and storing it in an obj
+db = boto3.resource("dynamodb", region_name='ap-south-1')       # which putting dynamodb you have to write it in lowercase
 
-table = dynamodb.Table('data_test')
+# linking the db obj to a table and storing it in an obj
+table =  db.Table('data_test')                                  # here you have to put the table name you have created in DynamoDB in AWS
 
-def register_new_user():
+
+def register():
     print("--- AWS DynamoDB User Registration ---")
-    
-    # taking input from the user
-    name = input("Enter Full Name: ")
-    email = input("Enter Email: ")
-    password = input("Enter Password: ")
 
-    # IMPORTANT: Your table uses 'id' as a Number (N)
-    # So we generate a random 6-digit number for the user ID
+    # getting user input
+    name = input("ENTER FULL NAME : ").lower()                  # receiving the username in lowercase
+    email = input("ENTER E-MAIL : ")
+    password = input("ENTER PASSWORD : ")
+
+    # generating 6 digit user id as there is also a feature call "id" in the data_test created in AWS which is a 'primary key'
     user_id = random.randint(100000, 999999)
 
-    print(f"\nSaving {name} to DynamoDB...")
+    print(f"\n\nSAVING {name}'s USER DETAILS TO THE SERVER...\n\n")
 
-    # 4. Save to the database
+    # saving to the database using try-catch
     try:
         table.put_item(
-           Item={
-                'id': user_id,           # Partition Key (Number)
-                'user_name': name,
-                'user_email': email,
-                'user_password': password
+            Item={
+                'id' : user_id,
+                'name' : name,
+                'email' : email,
+                'password' : password
             }
         )
-        print(f"✅ Success! User saved perfectly.")
-        print(f"Details saved: ID {user_id} | Email: {email}")
-        
+
+        print(f"✅ SUCCESS ! USER DETAILS SAVED.\n")
+
     except Exception as e:
         print(f"❌ Error: Something went wrong.")
-        print(f"Technical details: {e}")
+        print(f"Technical details: {e}\n")
 
-if __name__ == "__main__":
-    register_new_user()
+
+
+# -------------------------------------------------------------------------------------------------------------------------------
+
+# calling the function
+register()
+
+
