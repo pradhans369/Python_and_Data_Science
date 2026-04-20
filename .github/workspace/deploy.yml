@@ -1,0 +1,31 @@
+# section 1 -- putting the name of pipeline
+name: my first pipeline
+
+# section 2 -- the trigger point, check when do the yml file gets triggered
+on:
+    push:
+        branches:
+            - main         # the code gets triggered when someone pushes code
+
+
+# section 3 -- decides what job the yml file does
+jobs:
+    deploy-my-code:                                             # This is simply a variable name, you can put whatever name you want    
+        runs-on: ubuntu-latest
+
+        steps:                                                  # This makes sure than everything runs in a chronological order, if step 1 fails step 2 will automatically be cancelled
+            - name: First Step                                  # You can name step 1 whatever you want
+              run: echo "This is my basic setup!"               # tells the github to open the linux command terminal and run the given command
+         
+
+
+
+
+
+
+
+
+
+
+
+
