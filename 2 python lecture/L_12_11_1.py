@@ -3,20 +3,20 @@ The '@property' decorator in Python is used to turn a method into a read-only at
 
     - Instead of calling a method with (), you can access it like an attribute.
     - It allows you to define computed attributes that look like normal variables but are calculated dynamically whenever accessed.
-    - It is part of Python’s encapsulation mechanism, letting you hide implementation details while providing a clean interface.
+    - It is part of Python's encapsulation mechanism, letting you hide implementation details while providing a clean interface.
 
     
     USE CASE
     Dynamic Calculations
         - When an attribute depends on other attributes and should always stay updated.
-        - Example: A circle’s area and circumference depend on its radius. Instead of storing fixed values, use @property to calculate them whenever needed.
+        - Example: A circle's area and circumference depend on its radius. Instead of storing fixed values, use @property to calculate them whenever needed.
 
     Encapsulation and Validation
         - You may want to restrict direct access to attributes but still provide a way to get or set them in a controlled manner.
         - Example: Prevent negative values for salary or age.
 
     Cleaner API / Interface
-        - With @property, users of your class don’t need to know it’s a method — they access it like an attribute, which makes your class easier to use.
+        - With @property, users of your class don't need to know it's a method — they access it like an attribute, which makes your class easier to use.
 
 
 """
