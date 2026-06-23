@@ -29,15 +29,29 @@ print("--------------------------------------------------------------")
 nums_list = [1,1,3,35,46,5,3,1,454,93,3,33,5,5,3,3,6,5,3,46,3,1,3,126,36,5]
 hash_list = [None] * 20
 
-def hash(list):    # will take nums_list
-    for i in list:
+def count_frequencies(lst):
+    for i in lst:
         index = i % len(hash_list)
         start_index = index
         
-        while hash_list[index] is not None a
+        # Probe until we find an empty slot or the same number
+        while hash_list[index] is not None and hash_list[index][0] != i:
+            index = (index + 1) % len(hash_list)
+            
+            # Prevent infinite loop if the hash list is full
+            if index == start_index:
+                print("Hash list is full!")
+                return
+        
+        # If the slot is empty, insert the number with a count of 1
+        if hash_list[index] is None:
+            hash_list[index] = [i, 1]
+        # If the number is already present, increment its count
+        else:
+            hash_list[index][1] += 1
 
 
-
+count_frequencies(nums_list)
 
 
 
