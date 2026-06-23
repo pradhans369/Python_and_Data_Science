@@ -33,7 +33,8 @@ def hash(list):    # will take nums_list
     for i in list:
         index = i % len(hash_list)
         start_index = index
-            
+        
+        while hash_list[index] is not None a
 
 
 
