@@ -14,12 +14,15 @@
 
 ^           :  Beginning of a String
 $           :  End of a String
+.           :  Matches all the symbols
 
 []          :  Matches Characters in brackets
 [^ ]        :  Matches Characters NOT in brackets
 |           :  Either Or
 ( )         :  Group
 
+"^_text_"   : searches only for text that is at the start of the string
+"_text_$"   : searches only for text that is at the end of the string
 
 ---QUANTIFIERS---
 *           :  0 or More

@@ -48,6 +48,7 @@ print("---------------------------------------------")
 temp = "Ha HaHa abcHade Ha efHa"
 print(re.findall(r"\bHa", temp))                    # Only finds words from the beginning of the letters
 print(re.findall(r"\bItem", text_to_search))        # Searching for the word "Item"
+print(re.findall(r"\BHa", temp))
 
 
 
