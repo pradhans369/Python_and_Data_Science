@@ -67,3 +67,26 @@ print(re.findall(r"\d{3}.\d{3}.\d{4}", temp))           # matches any special ch
 # In Regex, the dot . is a wildcard character that means "match absolutely any character here" (except a newline).
 # Because it is a wildcard, it will match whatever separator is placed between the numbers—whether it is a dash, a space, a literal dot, or even a letter.
 print(re.findall(r"\d{3}\.\d{3}\.\d{4}", temp))         # matches the dot exactly           
+
+print("---------------------------------------------------")
+
+text = "Errors: 404, item code 1abc9, phone 555, code 9x."
+print(re.findall(r'\b\d\S*\d\b', text))                     # pritns words of any length that start and end with a digit (may contain letters btwn the digits)
+print(re.findall(r"\b\d*\d\b", text))                       # prints nums only of any length that start and end with a digit
+print(re.findall(r"\b\w*\w\b",text))
+
+print("---------------------------------------------------")
+
+temp = """
+(202) 555-0174
+(800) 555-0112
++1-202-555-0156
++1 (301) 555-0122
+"""
+
+print(re.findall(r"\b\(\d*\d\)\b", temp))
+
+
+
+
+
