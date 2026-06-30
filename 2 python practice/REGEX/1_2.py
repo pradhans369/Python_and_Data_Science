@@ -86,6 +86,54 @@ temp = """
 
 print(re.findall(r"\b\(\d*\d\)\b", temp))
 
+print("---------------------------------------------------")
+
+temp = """
+asdfk sfk kc ysgduijnvkj sujkasjbcisdnliuohv ;kjlsdhiuvds156 215vs15d
+
+15485
+
+123-54864-658415
+123-54864*658415
+123 54864 658415
+"""
+
+print(re.findall(r'[a-z]',temp))                            # searching for all the small case letters from a - z
+print(re.findall(r'[a-zA-Z1-9]',temp))                      # searching for all the letters in small and upper case from a - z, also for 1-9
+print(re.findall(r'[^a-zA-Z]',temp))
+print(re.findall(r'\b[a-zA-Z_]+\b',temp))                   # prints all the words without digits
+
+print('\nCHECKING DIGITS : ', re.findall(r'\d+',temp))
+print('\nCHECKING DIGITS : ', re.findall(r'\b\d+\b',temp))
+print('\nCHECKING DIGITS : ', re.findall(r'\b\d+.\b',temp))
+print('\nCHECKING DIGITS : ', re.findall(r'\b\d+.\d+.\d+\b',temp))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
