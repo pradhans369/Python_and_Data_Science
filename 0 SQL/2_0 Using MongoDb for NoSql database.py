@@ -6,7 +6,6 @@ from pymongo import MongoClient
 load_dotenv()
 uri = os.getenv("URI")
 
-
 # 2. Connect to MongoDB Atlas Cloud
 client = MongoClient(uri)
 
