@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" fill="none">
+  <defs>
+    <!-- Soft warm background gradient matching light yellow palette -->
+    <linearGradient id="dpBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffef7" />
+      <stop offset="50%" stop-color="#f5eed0" />
+      <stop offset="100%" stop-color="#ebdca8" />
+    </linearGradient>
+
+    <linearGradient id="initialsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181b" />
+      <stop offset="100%" stop-color="#3f3f46" />
+    </linearGradient>
+
+    <!-- Subtle inner shadow/border -->
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#785c18" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Circular Outer Silhouette -->
+  <circle cx="140" cy="140" r="136" fill="url(#dpBg)" stroke="#dcd0a2" stroke-width="2" />
+
+  <!-- Subtle Inner Guide Ring -->
+  <circle cx="140" cy="140" r="126" stroke="#e8dcaf" stroke-width="1.5" stroke-dasharray="4 4" />
+
+  <!-- Elegant Avatar Inner Circle -->
+  <circle cx="140" cy="120" r="62" fill="#ffffff" stroke="#dcd0a2" stroke-width="2" filter="url(#subtleShadow)" />
+  
+  <!-- Biswajeet Pradhan Monogram "BP" -->
+  <text x="140" y="137" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-weight="700" font-size="46" fill="url(#initialsGrad)" text-anchor="middle" letter-spacing="1">BP</text>
+
+  <!-- Clean Sub-Label Banner inside circular DP -->
+  <rect x="70" y="202" width="140" height="28" rx="14" fill="#18181b" />
+  <circle cx="86" cy="216" r="3.5" fill="#22c55e" />
+  <text x="148" y="221" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-weight="600" font-size="11" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">BISWAJEET</text>
+</svg>

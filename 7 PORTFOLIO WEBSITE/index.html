@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biswajeet Pradhan — Data Scientist & Machine Learning Engineer</title>
+  
+  <meta name="description" content="Portfolio of Biswajeet Pradhan — Data Scientist and Machine Learning Engineer specializing in statistical modeling, deep learning, NLP, and production MLOps.">
+  <meta name="author" content="Biswajeet Pradhan">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="static/images/favicon.svg">
+
+  <!-- Fonts: Dancing Script (Cursive Name), Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+  <!-- Ambient top warm glow -->
+  <div class="ambient-glow"></div>
+
+  <!-- =========================================================
+       NAVIGATION BAR
+       ========================================================= -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#overview" class="nav-brand">
+        <img src="static/images/bull-logo.png" alt="Logo" class="brand-icon">
+        <span>Biswajeet Pradhan</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#overview" class="nav-link active">Overview</a></li>
+        <li><a href="#focus" class="nav-link">Focus</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#writing" class="nav-link">Writing</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="#contact" class="btn-nav">CONTACTS</a>
+      </div>
+
+      <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       HERO / OVERVIEW SECTION (Custom Layout as per Mockup)
+       ========================================================= -->
+  <section class="hero" id="overview">
+    <div class="container hero-layout">
+      <!-- Left Column: Circular DP at top, followed by Name, Title, Bio, Actions, Socials -->
+      <div class="hero-left-col">
+        <div class="hero-dp-frame">
+          <img src="static/images/dp.png" alt="Biswajeet Pradhan" class="hero-dp-img">
+        </div>
+
+        <div class="hero-intro">
+          <h1 class="hero-name">Biswajeet Pradhan</h1>
+          <div class="hero-role">Data Scientist & Machine Learning Engineer</div>
+
+          <p class="hero-bio">
+            I build robust machine learning systems, statistical models, and deep learning architectures. My work focuses on translating complex datasets into reliable, production-ready software with measurable business impact.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              CONTACTS
+            </a>
+            <a href="#projects" class="btn btn-secondary">
+              Projects
+            </a>
+            <a href="static/docs/Biswajeet_Pradhan_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline resume-btn" id="resume-btn">
+              <i class="fa-regular fa-file-pdf"></i> Resume / Background
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/pradhans369" target="_blank" rel="noopener noreferrer" class="hero-social-link">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/pradhans369" target="_blank" rel="noopener noreferrer" class="hero-social-link">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="mailto:biswajeetpradhan36933@gmail.com" class="hero-social-link">
+              <i class="fa-regular fa-envelope"></i> Email
+            </a>
+            <a href="tel:+917848884936" class="hero-social-link">
+              <i class="fa-solid fa-phone"></i> +91 7848884936
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Bull Logo with Wreath -->
+      <div class="hero-right-col">
+        <div class="hero-logo-frame">
+          <img src="static/images/bull-logo.png" alt="Biswajeet Pradhan Bull Logo" class="hero-bull-logo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CORE FOCUS / BENTO HIGHLIGHTS
+       ========================================================= -->
+  <section class="section" id="focus">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Areas of Expertise</span>
+        <h2 class="section-title">Core Engineering Focus</h2>
+        <p class="section-subtitle">
+          From exploratory data analysis and feature engineering to model serving and latency optimization.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="bento-card span-2">
+          <div class="bento-icon"><i class="fa-solid fa-brain"></i></div>
+          <h3 class="bento-title">Predictive Machine Learning & Statistical Modeling</h3>
+          <p class="bento-desc">
+            Designing and evaluating predictive models for tabular, time-series, and survival datasets. Extensive experience managing high class imbalance, loss function customization, feature engineering, and rigorous cross-validation.
+          </p>
+          <div class="bento-chips">
+            <span class="tech-chip">Scikit-Learn</span>
+            <span class="tech-chip">XGBoost</span>
+            <span class="tech-chip">LightGBM</span>
+            <span class="tech-chip">Statistical Inference</span>
+            <span class="tech-chip">SHAP</span>
+          </div>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon"><i class="fa-solid fa-network-wired"></i></div>
+          <h3 class="bento-title">Deep Learning & Vision</h3>
+          <p class="bento-desc">
+            Implementing neural network architectures in PyTorch, leveraging Vision Transformers (ViTs), CNNs, transfer learning, and attention-based representation learning.
+          </p>
+          <div class="bento-chips">
+            <span class="tech-chip">PyTorch</span>
+            <span class="tech-chip">TorchVision</span>
+            <span class="tech-chip">OpenCV</span>
+            <span class="tech-chip">Transfer Learning</span>
+          </div>
+        </div>
+
+        <div class="bento-card">
+          <div class="bento-icon"><i class="fa-solid fa-comments"></i></div>
+          <h3 class="bento-title">Generative AI & NLP Architectures</h3>
+          <p class="bento-desc">
+            Architecting Retrieval-Augmented Generation (RAG) pipelines, semantic vector search, fine-tuning language models, and developing structured agent workflows.
+          </p>
+          <div class="bento-chips">
+            <span class="tech-chip">Hugging Face</span>
+            <span class="tech-chip">LangChain</span>
+            <span class="tech-chip">ChromaDB</span>
+            <span class="tech-chip">Vector Embeddings</span>
+          </div>
+        </div>
+
+        <div class="bento-card span-2">
+          <div class="bento-icon"><i class="fa-solid fa-server"></i></div>
+          <h3 class="bento-title">MLOps & Production Systems</h3>
+          <p class="bento-desc">
+            Bridging the gap between Jupyter notebooks and scalable services. Packaging models inside Docker containers, building low-latency inference APIs with FastAPI and Flask, tracking experiments via MLflow, and automating CI/CD on Render.
+          </p>
+          <div class="bento-chips">
+            <span class="tech-chip">Docker</span>
+            <span class="tech-chip">FastAPI</span>
+            <span class="tech-chip">MLflow</span>
+            <span class="tech-chip">Render</span>
+            <span class="tech-chip">CI/CD</span>
+            <span class="tech-chip">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SKILLS CATALOG (Curated - No Arbitrary Percentages)
+       ========================================================= -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technical Stack</span>
+        <h2 class="section-title">Tools & Technologies</h2>
+        <p class="section-subtitle">A curated index of frameworks, libraries, and tools I use in production.</p>
+      </div>
+
+      <div class="skills-catalog">
+        <div class="skill-group">
+          <div class="group-title"><i class="fa-solid fa-code"></i> Programming Languages</div>
+          <div class="group-desc">Core languages used for data manipulation, algorithmic modeling, and backend services.</div>
+          <div class="pill-container">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">SQL (PostgreSQL / SQLite)</span>
+            <span class="skill-pill">R</span>
+            <span class="skill-pill">Bash / Shell</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="group-title"><i class="fa-solid fa-cubes"></i> Machine Learning Frameworks</div>
+          <div class="group-desc">Libraries for classical statistical machine learning and deep representation learning.</div>
+          <div class="pill-container">
+            <span class="skill-pill">PyTorch</span>
+            <span class="skill-pill">Scikit-Learn</span>
+            <span class="skill-pill">XGBoost</span>
+            <span class="skill-pill">LightGBM</span>
+            <span class="skill-pill">TensorFlow / Keras</span>
+            <span class="skill-pill">SciPy</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="group-title"><i class="fa-solid fa-sparkles"></i> Generative AI & NLP</div>
+          <div class="group-desc">Tools for natural language processing, vector retrieval, and LLM applications.</div>
+          <div class="pill-container">
+            <span class="skill-pill">Hugging Face Transformers</span>
+            <span class="skill-pill">LangChain</span>
+            <span class="skill-pill">LlamaIndex</span>
+            <span class="skill-pill">ChromaDB</span>
+            <span class="skill-pill">FAISS</span>
+            <span class="skill-pill">Sentence-Transformers</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="group-title"><i class="fa-solid fa-chart-pie"></i> Data Analytics & Processing</div>
+          <div class="group-desc">Ecosystem for data wrangling, feature engineering, and visualization.</div>
+          <div class="pill-container">
+            <span class="skill-pill">Pandas</span>
+            <span class="skill-pill">NumPy</span>
+            <span class="skill-pill">Polars</span>
+            <span class="skill-pill">Plotly</span>
+            <span class="skill-pill">Seaborn</span>
+            <span class="skill-pill">Matplotlib</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="group-title"><i class="fa-solid fa-terminal"></i> MLOps & Infrastructure</div>
+          <div class="group-desc">Tooling for containerization, API serving, tracking, and cloud deployment.</div>
+          <div class="pill-container">
+            <span class="skill-pill">Docker</span>
+            <span class="skill-pill">FastAPI</span>
+            <span class="skill-pill">Flask</span>
+            <span class="skill-pill">MLflow</span>
+            <span class="skill-pill">Git / GitHub Actions</span>
+            <span class="skill-pill">Render</span>
+            <span class="skill-pill">Linux</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="group-title"><i class="fa-solid fa-calculator"></i> Methodologies & Theory</div>
+          <div class="group-desc">Fundamental concepts driving model design and evaluation integrity.</div>
+          <div class="pill-container">
+            <span class="skill-pill">Hypothesis Testing</span>
+            <span class="skill-pill">Cross-Validation Design</span>
+            <span class="skill-pill">Survival Analysis</span>
+            <span class="skill-pill">Dimensionality Reduction (PCA/UMAP)</span>
+            <span class="skill-pill">Feature Attribution (SHAP)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SELECTED PROJECTS (Case Study Style)
+       ========================================================= -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">PROJECTS</span>
+        <h2 class="section-title">Live Deployed Streamlit Projects</h2>
+        <p class="section-subtitle">
+          Interactive machine learning systems, deep vision architectures, NLP models, and operational predictive analytics pipelines deployed with Streamlit.
+        </p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All <span class="filter-count">12</span></button>
+        <button class="filter-btn" data-filter="cv">Computer Vision &amp; Deep Learning <span class="filter-count">4</span></button>
+        <button class="filter-btn" data-filter="nlp">NLP &amp; Text Intelligence <span class="filter-count">3</span></button>
+        <button class="filter-btn" data-filter="predictive">Predictive ML &amp; Analytics <span class="filter-count">5</span></button>
+      </div>
+
+      <!-- Project List -->
+      <div class="projects-list">
+        
+        <!-- Project 1: Image Captioning -->
+        <article class="project-item" data-category="cv">
+          <div class="project-info">
+            <div class="project-header">
+              <span class="project-cat">Computer Vision / Multimodal</span>
+              <span class="project-sep">&bull;</span>
+              <span class="mono" style="font-size:0.75rem; color:var(--text-tertiary);">Generative Vision-Language</span>
+            </div>
+            <h3 class="project-title">AI-Powered Image Captioning System</h3>
+            <p class="project-summary">
+              An intelligent vision-to-language captioning pipeline leveraging Salesforce's BLIP (Bootstrapping Language-Image Pre-training) architecture via Hugging Face Transformers. Generates contextual natural-language scene descriptions and supports conditional prompt-guided text generation for user-provided imagery.
+            </p>
+            <div class="project-meta-row">
+              <div class="meta-block">
+                <span class="meta-lbl">Model Architecture</span>
+                <span class="meta-val">Salesforce BLIP Transformer</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Generation Modes</span>
+                <span class="meta-val">Unconditional & Prompt-Guided</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Framework</span>
+                <span class="meta-val">PyTorch & Hugging Face</span>
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="tech-chip">PyTorch</span>
+              <span class="tech-chip">Hugging Face</span>
+              <span class="tech-chip">Transformers</span>
+              <span class="tech-chip">Streamlit</span>
+              <span class="tech-chip">PIL</span>
+              <span class="tech-chip">Python</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <a href="https://pradhans-image-captioning.streamlit.app/" target="_blank" rel="noopener noreferrer" class="action-link live-btn">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Web App
+            </a>
+            <a href="https://github.com/pradhans369/PROJECTS/tree/main/Image_captioning" target="_blank" rel="noopener noreferrer" class="action-link repo-btn">
+              <i class="fa-brands fa-github"></i> Repository
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2: OCR -->
+        <article class="project-item" data-category="cv">
+          <div class="project-info">
+            <div class="project-header">
+              <span class="project-cat">Computer Vision / Document Intelligence</span>
+              <span class="project-sep">&bull;</span>
+              <span class="mono" style="font-size:0.75rem; color:var(--text-tertiary);">Text Extraction Pipeline</span>
+            </div>
+            <h3 class="project-title">Enterprise Document & Scanned PDF OCR Engine</h3>
+            <p class="project-summary">
+              A document intelligence pipeline integrating Google's Tesseract OCR engine (via PyTesseract) with PyPDFium2 for fast multi-page PDF rasterization. Accurately digitizes scanned documents, multi-page books, and handwritten forms into searchable, structured text.
+            </p>
+            <div class="project-meta-row">
+              <div class="meta-block">
+                <span class="meta-lbl">Core Engine</span>
+                <span class="meta-val">Tesseract OCR + PyPDFium2</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Document Ingestion</span>
+                <span class="meta-val">Multi-Page Scanned PDFs & Images</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Recognition Types</span>
+                <span class="meta-val">Printed Text & Handwriting OCR</span>
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="tech-chip">Tesseract OCR</span>
+              <span class="tech-chip">PyPDFium2</span>
+              <span class="tech-chip">PIL</span>
+              <span class="tech-chip">Streamlit</span>
+              <span class="tech-chip">Python</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <a href="https://pradhans-ocr.streamlit.app/" target="_blank" rel="noopener noreferrer" class="action-link live-btn">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Web App
+            </a>
+            <a href="https://github.com/pradhans369/PROJECTS/tree/main/OCR" target="_blank" rel="noopener noreferrer" class="action-link repo-btn">
+              <i class="fa-brands fa-github"></i> Repository
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3: Object Detection Model -->
+        <article class="project-item" data-category="cv">
+          <div class="project-info">
+            <div class="project-header">
+              <span class="project-cat">Computer Vision / Object Detection</span>
+              <span class="project-sep">&bull;</span>
+              <span class="mono" style="font-size:0.75rem; color:var(--text-tertiary);">Real-Time Inference</span>
+            </div>
+            <h3 class="project-title">High-Performance Object Detection & Video Stream Analytics</h3>
+            <p class="project-summary">
+              A real-time object detection application powered by Ultralytics YOLOv8 and YOLO26n architectures. Integrated with Streamlit WebRTC for low-latency live webcam streams, uploaded video files, and high-resolution still images with interactive confidence thresholding and Non-Maximum Suppression (NMS).
+            </p>
+            <div class="project-meta-row">
+              <div class="meta-block">
+                <span class="meta-lbl">Backbone Models</span>
+                <span class="meta-val">Ultralytics YOLOv8 & YOLO26n</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Processing Modes</span>
+                <span class="meta-val">Live WebRTC, Video & Static Image</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Inference Tuning</span>
+                <span class="meta-val">Dynamic NMS & Confidence Control</span>
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="tech-chip">YOLOv8</span>
+              <span class="tech-chip">OpenCV</span>
+              <span class="tech-chip">Streamlit WebRTC</span>
+              <span class="tech-chip">PyTorch</span>
+              <span class="tech-chip">NumPy</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <a href="https://pradhans-vision.streamlit.app/" target="_blank" rel="noopener noreferrer" class="action-link live-btn">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Web App
+            </a>
+            <a href="https://github.com/pradhans369/PROJECTS/tree/main/Object_Detection_Model" target="_blank" rel="noopener noreferrer" class="action-link repo-btn">
+              <i class="fa-brands fa-github"></i> Repository
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 4: Sign Language Reader -->
+        <article class="project-item" data-category="cv">
+          <div class="project-info">
+            <div class="project-header">
+              <span class="project-cat">Computer Vision / Deep Learning</span>
+              <span class="project-sep">&bull;</span>
+              <span class="mono" style="font-size:0.75rem; color:var(--text-tertiary);">Live Stream Application</span>
+            </div>
+            <h3 class="project-title">Real-Time Indian Sign Language Recognition Engine</h3>
+            <p class="project-summary">
+              An end-to-end computer vision and accessibility system built with TensorFlow and OpenCV. Captures continuous live webcam video streams, isolates hand regions of interest (ROI), and classifies 36 Indian Sign Language alphanumeric gestures in real time using a custom deep convolutional neural network.
+            </p>
+            <div class="project-meta-row">
+              <div class="meta-block">
+                <span class="meta-lbl">Architecture</span>
+                <span class="meta-val">Custom Deep CNN (Keras)</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Recognition Scope</span>
+                <span class="meta-val">36 Alphanumeric Classes (0–9, A–Z)</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Input Pipeline</span>
+                <span class="meta-val">Live Webcam Stream & Hand ROI</span>
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="tech-chip">TensorFlow</span>
+              <span class="tech-chip">Keras</span>
+              <span class="tech-chip">OpenCV</span>
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">Streamlit</span>
+              <span class="tech-chip">NumPy</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/pradhans369/PROJECTS/tree/main/Sign_language_reader" target="_blank" rel="noopener noreferrer" class="action-link repo-btn">
+              <i class="fa-brands fa-github"></i> Repository
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 5: Brand Sentiment Analysis -->
+        <article class="project-item" data-category="nlp">
+          <div class="project-info">
+            <div class="project-header">
+              <span class="project-cat">NLP / Brand Intelligence</span>
+              <span class="project-sep">&bull;</span>
+              <span class="mono" style="font-size:0.75rem; color:var(--text-tertiary);">Master's Research Study</span>
+            </div>
+            <h3 class="project-title">Social Media Sentiment Analysis for Enterprise Brand Management</h3>
+            <p class="project-summary">
+              Master's research study analyzing customer perceptions across six major US commercial airlines on Twitter/X. Features a custom NLTK NLP preprocessing pipeline (tokenization, emoji handling, TF-IDF) and an Optuna-tuned gradient boosted ensemble (XGBoost, LightGBM, and CatBoost).
+            </p>
+            <div class="project-meta-row">
+              <div class="meta-block">
+                <span class="meta-lbl">Architecture</span>
+                <span class="meta-val">Ensemble (XGBoost + LightGBM + CatBoost)</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Benchmark Result</span>
+                <span class="meta-val">93.24% Overall Test Accuracy</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Dataset Scope</span>
+                <span class="meta-val">14,640 Multi-Airline Tweets (6 Carriers)</span>
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="tech-chip">XGBoost</span>
+              <span class="tech-chip">LightGBM</span>
+              <span class="tech-chip">CatBoost</span>
+              <span class="tech-chip">NLTK</span>
+              <span class="tech-chip">Scikit-Learn</span>
+              <span class="tech-chip">Optuna</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <a href="https://pradhans-brand-reputation-management.streamlit.app/" target="_blank" rel="noopener noreferrer" class="action-link live-btn">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Web App
+            </a>
+            <a href="https://github.com/pradhans369/PROJECTS/tree/main/sentiment_analysis_social_media_brand_management" target="_blank" rel="noopener noreferrer" class="action-link repo-btn">
+              <i class="fa-brands fa-github"></i> Repository
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 6: Movie Recommendation System -->
+        <article class="project-item" data-category="nlp">
+          <div class="project-info">
+            <div class="project-header">
+              <span class="project-cat">Recommender Systems</span>
+              <span class="project-sep">&bull;</span>
+              <span class="mono" style="font-size:0.75rem; color:var(--text-tertiary);">Content-Based Filtering</span>
+            </div>
+            <h3 class="project-title">Vector Space Content-Based Movie Recommendation Engine</h3>
+            <p class="project-summary">
+              A content-based recommendation engine processing 4,800+ films from TMDB. Combines multi-feature metadata tags (genres, cast, crew, keywords) with CountVectorizer and Porter Stemming, computing pairwise Cosine Similarities with live TMDB API poster integration.
+            </p>
+            <div class="project-meta-row">
+              <div class="meta-block">
+                <span class="meta-lbl">Architecture</span>
+                <span class="meta-val">CountVectorizer + Cosine Similarity</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Ranking Metric</span>
+                <span class="meta-val">Top-5 Nearest Neighbor Relevance</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Dataset Scope</span>
+                <span class="meta-val">4,806 TMDB Multi-Feature Vectors</span>
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="tech-chip">Cosine Similarity</span>
+              <span class="tech-chip">TMDB API</span>
+              <span class="tech-chip">Scikit-Learn</span>
+              <span class="tech-chip">Pandas</span>
+              <span class="tech-chip">Streamlit</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <a href="https://pradhans-movies-recommendation-system.streamlit.app/" target="_blank" rel="noopener noreferrer" class="action-link live-btn">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Web App
+            </a>
+            <a href="https://github.com/pradhans369/PROJECTS/tree/main/Movie_Recommendation_System" target="_blank" rel="noopener noreferrer" class="action-link repo-btn">
+              <i class="fa-brands fa-github"></i> Repository
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 7: Email Spam Classifier -->
+        <article class="project-item" data-category="nlp">
+          <div class="project-info">
+            <div class="project-header">
+              <span class="project-cat">NLP / Text Classification</span>
+              <span class="project-sep">&bull;</span>
+              <span class="mono" style="font-size:0.75rem; color:var(--text-tertiary);">Security Intelligence</span>
+            </div>
+            <h3 class="project-title">High-Precision Email & SMS Spam Detection Engine</h3>
+            <p class="project-summary">
+              A machine learning text classification system benchmarked across Multinomial Naive Bayes, Support Vector Machines, Random Forests, and Stacking Classifiers. Optimized with TF-IDF vectorization and NLTK stemming to achieve zero false positives on genuine user communications.
+            </p>
+            <div class="project-meta-row">
+              <div class="meta-block">
+                <span class="meta-lbl">Model Selection</span>
+                <span class="meta-val">Multinomial Naive Bayes + TF-IDF</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Benchmark Result</span>
+                <span class="meta-val">1.00 Precision Score (0 False Positives)</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Corpus Size</span>
+                <span class="meta-val">5,572 Verified SMS / Email Records</span>
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="tech-chip">Scikit-Learn</span>
+              <span class="tech-chip">MultinomialNB</span>
+              <span class="tech-chip">TF-IDF</span>
+              <span class="tech-chip">NLTK</span>
+              <span class="tech-chip">Python</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/pradhans369/PROJECTS/tree/main/Email_Spam_Classifier" target="_blank" rel="noopener noreferrer" class="action-link repo-btn">
+              <i class="fa-brands fa-github"></i> Repository
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 8: Late Delivery Risk Prediction -->
+        <article class="project-item" data-category="predictive">
+          <div class="project-info">
+            <div class="project-header">
+              <span class="project-cat">Supply Chain Analytics</span>
+              <span class="project-sep">&bull;</span>
+              <span class="mono" style="font-size:0.75rem; color:var(--text-tertiary);">Risk Modeling</span>
+            </div>
+            <h3 class="project-title">Predictive Machine Learning for Late Delivery Risk in Global Logistics</h3>
+            <p class="project-summary">
+              Applied enterprise research for APL Logistics analyzing international shipment transactions. Built a leak-free predictive classification pipeline featuring target encoding for high-cardinality shipping lanes and hyperparameter-tuned ensemble models to forecast delivery delays pre-dispatch.
+            </p>
+            <div class="project-meta-row">
+              <div class="meta-block">
+                <span class="meta-lbl">Architecture</span>
+                <span class="meta-val">Leak-Free Target Encoding + Random Forest</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Benchmark Result</span>
+                <span class="meta-val">1.00 ROC-AUC (Optuna Tuned)</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Data Scale</span>
+                <span class="meta-val">180,000+ International Shipments</span>
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="tech-chip">Scikit-Learn</span>
+              <span class="tech-chip">Target Encoding</span>
+              <span class="tech-chip">Optuna</span>
+              <span class="tech-chip">Random Forest</span>
+              <span class="tech-chip">Pandas</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <a href="https://pradhans-late-delivery-risk-prediction.streamlit.app/" target="_blank" rel="noopener noreferrer" class="action-link live-btn">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Web App
+            </a>
+            <a href="https://github.com/pradhans369/PROJECTS/tree/main/Late_Delivery_Risk_Prediction_in_Global_Supply_Chain_Operations" target="_blank" rel="noopener noreferrer" class="action-link repo-btn">
+              <i class="fa-brands fa-github"></i> Repository
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 9: Real Estate Buyer Segmentation -->
+        <article class="project-item" data-category="predictive">
+          <div class="project-info">
+            <div class="project-header">
+              <span class="project-cat">Market Intelligence</span>
+              <span class="project-sep">&bull;</span>
+              <span class="mono" style="font-size:0.75rem; color:var(--text-tertiary);">Unsupervised Clustering</span>
+            </div>
+            <h3 class="project-title">Real Estate Buyer Segmentation & Investment Profiling Framework</h3>
+            <p class="project-summary">
+              An unsupervised learning analytics system analyzing 7,305 global property transactions. Segregates real estate buyers into four distinct operational archetypes (Luxury Investors, Global Investors, Corporate Buyers, First-Time Buyers) using K-Means and Hierarchical Clustering for targeted capital allocation.
+            </p>
+            <div class="project-meta-row">
+              <div class="meta-block">
+                <span class="meta-lbl">Methodology</span>
+                <span class="meta-val">K-Means & Hierarchical Clustering</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Clustering Model</span>
+                <span class="meta-val">4 Empirically Validated Buyer Archetypes</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Transaction Volume</span>
+                <span class="meta-val">7,305 Property Investment Records</span>
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="tech-chip">K-Means</span>
+              <span class="tech-chip">Scikit-Learn</span>
+              <span class="tech-chip">Plotly</span>
+              <span class="tech-chip">Streamlit</span>
+              <span class="tech-chip">Pandas</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <a href="https://pradhans-investor-insights.streamlit.app/" target="_blank" rel="noopener noreferrer" class="action-link live-btn">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Web App
+            </a>
+            <a href="https://github.com/pradhans369/PROJECTS/tree/main/Buyer_Segmentation_and_Investment_Profiling_in_Real_Estate" target="_blank" rel="noopener noreferrer" class="action-link repo-btn">
+              <i class="fa-brands fa-github"></i> Repository
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 10: Career Progression Analysis -->
+        <article class="project-item" data-category="predictive">
+          <div class="project-info">
+            <div class="project-header">
+              <span class="project-cat">Human Capital Analytics</span>
+              <span class="project-sep">&bull;</span>
+              <span class="mono" style="font-size:0.75rem; color:var(--text-tertiary);">Retention Modeling</span>
+            </div>
+            <h3 class="project-title">Career Trajectory Intelligence & Retention Optimization (Palo Alto Networks)</h3>
+            <p class="project-summary">
+              An unsupervised workforce analytics study analyzing 1,470 employee records across 45 demographic and performance attributes. Diagnoses systemic career stagnation thresholds (Years in Current Role vs. Time Since Promotion) to uncover empirical flight risk clusters and optimize talent retention.
+            </p>
+            <div class="project-meta-row">
+              <div class="meta-block">
+                <span class="meta-lbl">Methodology</span>
+                <span class="meta-val">Unsupervised K-Means + SSE Elbow Analysis</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Empirical Insight</span>
+                <span class="meta-val">4 Stagnation Risk Archetypes Identified</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Cohort Scope</span>
+                <span class="meta-val">N = 1,470 Records across 45 Dimensions</span>
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="tech-chip">K-Means</span>
+              <span class="tech-chip">Scikit-Learn</span>
+              <span class="tech-chip">Plotly</span>
+              <span class="tech-chip">Streamlit</span>
+              <span class="tech-chip">Seaborn</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/pradhans369/PROJECTS/tree/main/Career_Progression_and_Promotion_Gap_Analysis" target="_blank" rel="noopener noreferrer" class="action-link repo-btn">
+              <i class="fa-brands fa-github"></i> Repository
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 11: Shipping Route Efficiency -->
+        <article class="project-item" data-category="predictive">
+          <div class="project-info">
+            <div class="project-header">
+              <span class="project-cat">Logistics Optimization</span>
+              <span class="project-sep">&bull;</span>
+              <span class="mono" style="font-size:0.75rem; color:var(--text-tertiary);">Operations Research</span>
+            </div>
+            <h3 class="project-title">Factory-to-Customer Shipping Route Efficiency & Congestion Analysis</h3>
+            <p class="project-summary">
+              Empirical logistics research on 10,194 verified freight shipments across 59 North American territories for Nassau Candy Industries. Analyzes transit duration variability, multimodal carrier performance, regional congestion bottlenecks, and logistics margin preservation.
+            </p>
+            <div class="project-meta-row">
+              <div class="meta-block">
+                <span class="meta-lbl">Analysis Method</span>
+                <span class="meta-val">Stochastic Queuing & Multimodal Transit Modeling</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Geographic Coverage</span>
+                <span class="meta-val">59 North American Transit Corridors</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Logistics Volume</span>
+                <span class="meta-val">10,194 Verified Freight Shipments</span>
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="tech-chip">Plotly</span>
+              <span class="tech-chip">Statistical Analysis</span>
+              <span class="tech-chip">Pandas</span>
+              <span class="tech-chip">Streamlit</span>
+              <span class="tech-chip">Python</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <a href="https://pradhans-candyindustries-analytics.streamlit.app/" target="_blank" rel="noopener noreferrer" class="action-link live-btn">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Web App
+            </a>
+            <a href="https://github.com/pradhans369/PROJECTS/tree/main/Factory_to_Customer_Shipping_Route_Efficiency_Analysis" target="_blank" rel="noopener noreferrer" class="action-link repo-btn">
+              <i class="fa-brands fa-github"></i> Repository
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 12: Smart Factory Process Health -->
+        <article class="project-item" data-category="predictive">
+          <div class="project-info">
+            <div class="project-header">
+              <span class="project-cat">Smart Manufacturing</span>
+              <span class="project-sep">&bull;</span>
+              <span class="mono" style="font-size:0.75rem; color:var(--text-tertiary);">Industrial IoT Analytics</span>
+            </div>
+            <h3 class="project-title">Manufacturing Process Health & Operational Diagnostics in 6G Smart Factories</h3>
+            <p class="project-summary">
+              Advanced operational intelligence framework for Thales Enterprises smart factory environments. Continuously monitors multi-sensor telemetry (temperature drift, vibration anomalies, power consumption trade-offs) to detect early machine degradation and prevent unpredicted manufacturing downtime.
+            </p>
+            <div class="project-meta-row">
+              <div class="meta-block">
+                <span class="meta-lbl">Telemetry Pipeline</span>
+                <span class="meta-val">Multivariate Anomaly & Degradation Scoring</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Diagnostic Capability</span>
+                <span class="meta-val">Multi-State Shift & Thermal Drift Detection</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-lbl">Operational Domain</span>
+                <span class="meta-val">Industrial IoT High-Frequency Telemetry</span>
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="tech-chip">Industrial IoT</span>
+              <span class="tech-chip">Time Series</span>
+              <span class="tech-chip">Pandas</span>
+              <span class="tech-chip">Streamlit</span>
+              <span class="tech-chip">NumPy</span>
+            </div>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/pradhans369/PROJECTS/tree/main/Manufacturing_Process_Health_and_Operational_Efficiency" target="_blank" rel="noopener noreferrer" class="action-link repo-btn">
+              <i class="fa-brands fa-github"></i> Repository
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       EXPERIENCE & EDUCATION TIMELINE
+       ========================================================= -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Track Record</span>
+        <h2 class="section-title">Experience & Education</h2>
+        <p class="section-subtitle">Chronological record of roles, research focus, and credentials.</p>
+      </div>
+
+      <div class="timeline-container">
+        <!-- Experience -->
+        <div class="timeline-column">
+          <h3 class="timeline-column-title"><i class="fa-solid fa-briefcase"></i> Experience</h3>
+          <div class="timeline-cards">
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div class="timeline-role">Data Scientist & ML Practitioner</div>
+                <div class="timeline-period">2023 &ndash; Present</div>
+              </div>
+              <div class="timeline-org">Independent Engineering & Applied Projects</div>
+              <p class="timeline-text">
+                Architecting end-to-end machine learning services, building RAG knowledge systems, and containerizing models with Docker for production serving on Render and cloud platforms.
+              </p>
+            </div>
+
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div class="timeline-role">Machine Learning & Analytics Developer</div>
+                <div class="timeline-period">2022 &ndash; 2023</div>
+              </div>
+              <div class="timeline-org">Data Science Implementations</div>
+              <p class="timeline-text">
+                Designed predictive pipelines for tabular data, built customer segmentation clusters, and implemented feature engineering frameworks using Scikit-Learn and PostgreSQL.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education & Credentials -->
+        <div class="timeline-column">
+          <h3 class="timeline-column-title"><i class="fa-solid fa-graduation-cap"></i> Education & Certifications</h3>
+          <div class="timeline-cards">
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div class="timeline-role">Bachelor of Technology &bull; Computer Science</div>
+                <div class="timeline-period">Undergraduate Degree</div>
+              </div>
+              <div class="timeline-org">Engineering Foundation</div>
+              <p class="timeline-text">
+                Rigorous curriculum covering Applied Statistics, Linear Algebra, Probability, Data Structures, Algorithms, and Software Engineering principles.
+              </p>
+            </div>
+
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div class="timeline-role">Deep Learning & MLOps Specializations</div>
+                <div class="timeline-period">Continuous Learning</div>
+              </div>
+              <div class="timeline-org">DeepLearning.AI / Coursera Verified</div>
+              <p class="timeline-text">
+                Advanced certifications in Neural Networks, Deep Learning Architectures, Structuring Machine Learning Projects, Attention Models, and Production MLOps.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       WRITING & TECHNICAL CASE STUDIES
+       ========================================================= -->
+  <section class="section" id="writing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Publications & Notes</span>
+        <h2 class="section-title">Technical Writing</h2>
+        <p class="section-subtitle">Deep dives into architectural trade-offs, empirical observations, and best practices.</p>
+      </div>
+
+      <div class="writing-grid">
+        <a href="#contact" class="writing-card">
+          <div class="writing-tag">Architectures</div>
+          <h4 class="writing-title">Designing Latency-Sensitive RAG Systems with Hybrid Retrieval</h4>
+          <p class="writing-snippet">
+            Comparing pure vector search vs. hybrid BM25 + dense re-ranking pipelines to optimize answer faithfulness while preserving sub-second response times.
+          </p>
+          <div class="writing-meta">
+            <i class="fa-regular fa-clock"></i> 6 min read &bull; Case Study
+          </div>
+        </a>
+
+        <a href="#contact" class="writing-card">
+          <div class="writing-tag">Applied ML</div>
+          <h4 class="writing-title">Managing Extreme Class Imbalance in Financial Anomaly Detection</h4>
+          <p class="writing-snippet">
+            Evaluating Focal Loss, SMOTE oversampling, and precision-recall threshold tuning when rare positive anomalies account for less than 0.2% of data.
+          </p>
+          <div class="writing-meta">
+            <i class="fa-regular fa-clock"></i> 8 min read &bull; Empirical Note
+          </div>
+        </a>
+
+        <a href="#contact" class="writing-card">
+          <div class="writing-tag">MLOps</div>
+          <h4 class="writing-title">From Notebook to Production: Serving ML Models with Docker & Render</h4>
+          <p class="writing-snippet">
+            Practical strategies for serializing model weights, minimizing container build layers, and configuring zero-downtime deployment webhooks.
+          </p>
+          <div class="writing-meta">
+            <i class="fa-regular fa-clock"></i> 5 min read &bull; Guide
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CONTACT SECTION
+       ========================================================= -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">CONTACTS</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">
+          Interested in discussing a role, a machine learning project, or an engineering collaboration? Drop a line below.
+        </p>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-info">
+          <div class="contact-channels">
+            <div class="channel-card">
+              <div class="channel-icon"><i class="fa-regular fa-envelope"></i></div>
+              <div class="channel-content">
+                <h4>Email</h4>
+                <a href="mailto:biswajeetpradhan36933@gmail.com">biswajeetpradhan36933@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="channel-card">
+              <div class="channel-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="channel-content">
+                <h4>Phone Number</h4>
+                <a href="tel:+917848884936">+91 7848884936</a>
+              </div>
+            </div>
+
+            <div class="channel-card">
+              <div class="channel-icon"><i class="fa-brands fa-linkedin"></i></div>
+              <div class="channel-content">
+                <h4>LinkedIn</h4>
+                <a href="https://www.linkedin.com/in/pradhans369" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/pradhans369</a>
+              </div>
+            </div>
+
+            <div class="channel-card">
+              <div class="channel-icon"><i class="fa-brands fa-github"></i></div>
+              <div class="channel-content">
+                <h4>GitHub</h4>
+                <a href="https://github.com/pradhans369" target="_blank" rel="noopener noreferrer">github.com/pradhans369</a>
+              </div>
+            </div>
+
+            <div class="channel-card">
+              <div class="channel-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="channel-content">
+                <h4>Location</h4>
+                <span>ODISHA, INDIA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="form-name">Name</label>
+                <input type="text" id="form-name" name="name" class="form-input" placeholder="Your name" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="form-email">Email</label>
+                <input type="email" id="form-email" name="email" class="form-input" placeholder="you@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-subject">Subject</label>
+              <input type="text" id="form-subject" name="subject" class="form-input" placeholder="Role inquiry / ML project discussion" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-message">Message</label>
+              <textarea id="form-message" name="message" class="form-input" placeholder="Hello Biswajeet, I'd like to discuss..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+              Send Message
+            </button>
+
+            <div id="form-status" class="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <a href="#overview" class="nav-brand">
+          <img src="static/images/favicon.svg" alt="Logo" class="brand-icon">
+          <span>Biswajeet Pradhan</span>
+        </a>
+        <p>&copy; 2026 Biswajeet Pradhan. Designed for Data Science & Machine Learning.</p>
+      </div>
+
+      <div class="footer-right">
+        <div class="render-badge">
+          <i class="fa-solid fa-circle-check"></i> Configured for Render
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="static/js/main.js"></script>
+</body>
+</html>
