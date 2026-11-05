@@ -21,6 +21,8 @@ app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "dev-secret-key-biswajee
 
 
 @app.route("/")
+@app.route("/api/index")
+@app.route("/api/index.py")
 def index():
     """Render the main portfolio page."""
     current_year = datetime.datetime.now().year
