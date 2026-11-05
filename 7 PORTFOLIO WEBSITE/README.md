@@ -1,66 +1,54 @@
 # Biswajeet Pradhan — Portfolio Website
 
-A clean, modern, editorial portfolio website built for **Data Science & Machine Learning Engineering**. Designed with modern engineering aesthetics (inspired by Linear, Vercel, and Stripe developer portals), focusing on clarity, real architectural depth, and zero gimmicks.
+A clean, modern, editorial portfolio website built for **Data Science & Machine Learning Engineering**. Designed with modern engineering aesthetics, focusing on clarity, real architectural depth, and zero gimmicks.
 
-Pre-configured for **Render** (both as a Python Web Service and as a Static Site).
-
----
-
-## 🎨 Design Philosophy
-
-- **Modern & Professional Aesthetic**:
-  - Deep zinc/charcoal dark palette (`#09090b` and `#121215`) with subtle, refined border dividers (`rgba(255, 255, 255, 0.08)`).
-  - No distracting bouncing canvas particles, no fake progress percentages ("92% Python"), and no toy simulator widgets.
-  - Crisp typography using `Inter` for body reading and `JetBrains Mono` for code, tags, and metrics.
-- **Bento Grid Core Focus**:
-  - Highlights core engineering domains: Predictive Modeling, Deep Learning & Vision, Generative AI & NLP, and Production MLOps.
-- **Curated Skills Catalog**:
-  - Skills organized by actual real-world categories (Languages, Frameworks, NLP/GenAI, Data Wrangling, Infrastructure, and Methodologies).
-- **Case-Study Style Projects**:
-  - Filterable by *All*, *GenAI & RAG*, *Computer Vision*, and *Predictive ML*.
-  - Realistic architectures, benchmark results, latency considerations, and tech stack tags.
-- **Technical Writing & Notes Section**:
-  - Highlighting engineering thought leadership and architectural trade-offs.
-- **Direct & Functional Contact**:
-  - Clean contact cards (Email, LinkedIn, GitHub, Location) + AJAX form with backend validation.
+Configured for **Vercel** serverless deployment with full Python Flask API support (or zero-config static hosting).
 
 ---
 
-## 📁 Directory Structure
+## 📁 Project Structure
 
 ```text
 7 PORTFOLIO WEBSITE/
-├── app.py                     # Production Flask web server & contact API
-├── index.html                 # Standalone static entry point (for static hosting)
-├── requirements.txt           # Python dependencies (Flask, Gunicorn)
-├── Procfile                   # Process file for Render web service
-├── render.yaml                # Render Blueprint (Infrastructure as Code)
-├── .gitignore                 # Git ignore rules
-├── README.md                  # Setup & customization guide
+├── api/
+│   └── index.py                           # Vercel Serverless Function entry point
+├── static/
+│   ├── css/
+│   │   └── style.css                      # Pastel & zinc editorial stylesheet & responsive layout
+│   ├── js/
+│   │   └── main.js                        # Smooth filtering, mobile navigation, and contact AJAX
+│   ├── images/
+│   │   ├── bull-logo.png                  # Custom Bull Logo (Hero & Footer)
+│   │   ├── dp.png                         # Biswajeet Pradhan profile photograph
+│   │   ├── cert-andrew-ng.png             # DeepLearning.AI / Stanford ML certificate
+│   │   ├── cert-ibm.png                   # IBM Data Analytics Foundations certificate
+│   │   └── favicon.svg                    # Monogram SVG favicon
+│   └── docs/
+│       ├── Biswajeet_Pradhan_Resume.pdf   # Resume PDF
+│       ├── cert-andrew-ng.pdf             # DeepLearning.AI / Stanford ML certificate PDF
+│       └── cert-ibm.pdf                   # IBM Data Analytics Foundations certificate PDF
 ├── templates/
-│   └── index.html             # Flask template entry point
-└── static/
-    ├── css/
-    │   └── style.css          # Editorial zinc-dark stylesheet & responsive layouts
-    ├── js/
-    │   └── main.js            # Smooth filters, mobile menu, and contact form AJAX
-    └── images/
-        ├── avatar.svg         # Clean minimalist profile placeholder badge
-        └── favicon.svg        # Crisp modern monogram favicon
+│   └── index.html                         # Production Flask Jinja2 template
+├── app.py                                 # Flask web application & /api/contact handler
+├── index.html                             # Pre-compiled static HTML entry point
+├── requirements.txt                       # Python dependencies (Flask>=3.0.0)
+├── vercel.json                            # Vercel deployment rewrites configuration
+├── .gitignore                             # Git ignore rules (including .vercel/)
+└── README.md                              # Setup & deployment documentation
 ```
 
 ---
 
-## 💻 Local Preview
+## 💻 Local Preview & Testing
 
-### Running with Python & Flask:
+### Option A: Running with Python & Flask
 ```powershell
 cd "d:\THE CODE\Python_and_Data_Science\7 PORTFOLIO WEBSITE"
 python app.py
 ```
 Open your browser at **`http://localhost:5000`**.
 
-### Or Running Statically:
+### Option B: Running Statically
 Double-click `index.html` or run:
 ```powershell
 python -m http.server 8000
@@ -69,27 +57,42 @@ Then visit `http://localhost:8000`.
 
 ---
 
-## 🚀 Deploying to Render
+## 🚀 Deploying to Vercel
 
-### Method A: Web Service (Python + Gunicorn)
-1. Push this folder to a GitHub repository.
-2. In Render Dashboard, click **New +** &rarr; **Web Service**.
-3. Select your repository.
-4. Settings:
-   - **Build Command**: `pip install -r requirements.txt`
-   - **Start Command**: `gunicorn app:app`
-5. Click **Deploy Web Service**.
+### Method 1: Deploy via GitHub (Recommended for automatic CI/CD)
+1. Push your repository to **GitHub**:
+   ```powershell
+   git add .
+   git commit -m "Configure portfolio for Vercel deployment"
+   git push origin main
+   ```
+2. Log in to [Vercel](https://vercel.com).
+3. Click **Add New...** &rarr; **Project**.
+4. Select and import your GitHub repository.
+5. In the project settings:
+   - **Framework Preset**: *Other* (Vercel automatically detects `vercel.json` and Python `api/index.py`).
+   - **Root Directory**: `7 PORTFOLIO WEBSITE` (if this folder is a subfolder in your repo, set the Root Directory to this path in Vercel settings; otherwise leave as `./`).
+6. Click **Deploy**. Vercel will install dependencies from `requirements.txt` and launch your live site with an automatic HTTPS `*.vercel.app` domain.
 
-### Method B: Static Site (Zero Cost)
-1. In Render Dashboard, click **New +** &rarr; **Static Site**.
-2. Select your repository.
-3. Set **Publish Directory** to `.`.
-4. Click **Create Static Site**.
+### Method 2: Deploy via Vercel CLI
+1. Install the Vercel CLI:
+   ```powershell
+   npm install -g vercel
+   ```
+2. Deploy directly from the project directory:
+   ```powershell
+   vercel
+   ```
+3. Follow the terminal prompts to select your account and project settings.
+4. Deploy to production:
+   ```powershell
+   vercel --prod
+   ```
 
 ---
 
-## ✏️ Customization Quick Reference
-
-- **Profile Photo**: Put your photo in `static/images/avatar.jpg` and update the `src` attribute in `templates/index.html` and `index.html`.
-- **Contact Details**: Update email and LinkedIn links in `templates/index.html` and `index.html`.
-- **Projects**: Edit project titles, summaries, and GitHub links in the `<section id="projects">` block.
+## ⚙️ Key Backend Endpoints
+- **`/`**: Renders the complete portfolio webpage with real-time copyright year.
+- **`/resume`**: Serves `Biswajeet_Pradhan_Resume.pdf` (inline in browser on desktop, downloadable on mobile).
+- **`/health`**: Serverless health check endpoint (`{"status": "healthy"}`).
+- **`/api/contact`**: POST endpoint for handling AJAX contact form submissions safely.

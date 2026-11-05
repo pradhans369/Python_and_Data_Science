@@ -1,13 +1,20 @@
 """
 Biswajeet Pradhan - Professional AI & Data Science Portfolio Web Application
-Production-ready Flask Application configured for Render deployment.
+Production-ready Flask Application configured for Vercel and local development.
 """
 
 import os
 import datetime
 from flask import Flask, render_template, request, jsonify, send_from_directory
 
-app = Flask(__name__)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+app = Flask(
+    __name__,
+    template_folder=os.path.join(BASE_DIR, "templates"),
+    static_folder=os.path.join(BASE_DIR, "static"),
+    static_url_path="/static"
+)
 
 # Basic security & configuration
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "dev-secret-key-biswajeet-portfolio")
@@ -27,7 +34,7 @@ def resume():
     - On Desktop: Serves inline so it opens directly in the browser's native PDF reader tab.
     - On Mobile (or if download=true): Serves as attachment to trigger automatic download.
     """
-    docs_dir = os.path.join(app.root_path, "static", "docs")
+    docs_dir = os.path.join(BASE_DIR, "static", "docs")
     user_agent = request.headers.get("User-Agent", "").lower()
     is_mobile = any(keyword in user_agent for keyword in ["mobile", "android", "iphone", "ipad", "ipod", "blackberry"])
     as_attachment = (request.args.get("download", "").lower() == "true") or is_mobile
@@ -43,7 +50,7 @@ def resume():
 
 @app.route("/health")
 def health():
-    """Health check endpoint for Render monitoring and uptime checks."""
+    """Health check endpoint for Vercel monitoring and uptime checks."""
     return jsonify({
         "status": "healthy",
         "service": "Biswajeet Pradhan Portfolio",
@@ -90,7 +97,7 @@ def contact():
 
 
 if __name__ == "__main__":
-    # Render assigns dynamic port via PORT environment variable
+    # Vercel / Cloud providers assign dynamic port via PORT environment variable
     port = int(os.environ.get("PORT", 5000))
     debug_mode = os.environ.get("FLASK_DEBUG", "False").lower() in ("true", "1")
     print(f"[*] Starting Biswajeet Pradhan Portfolio on port {port} (Debug: {debug_mode})")
