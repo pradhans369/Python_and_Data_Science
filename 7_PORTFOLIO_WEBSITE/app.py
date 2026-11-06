@@ -24,9 +24,11 @@ app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "dev-secret-key-biswajee
 @app.route("/api/index")
 @app.route("/api/index.py")
 def index():
-    """Render the main portfolio page."""
+    """Render the main portfolio page with dynamic cache-busting for resume."""
     current_year = datetime.datetime.now().year
-    return render_template("index.html", year=current_year)
+    resume_path = os.path.join(BASE_DIR, "static", "docs", "Biswajeet_Pradhan_Resume.pdf")
+    resume_v = int(os.path.getmtime(resume_path)) if os.path.exists(resume_path) else 2
+    return render_template("index.html", year=current_year, resume_version=resume_v)
 
 
 @app.route("/resume")
@@ -41,13 +43,17 @@ def resume():
     is_mobile = any(keyword in user_agent for keyword in ["mobile", "android", "iphone", "ipad", "ipod", "blackberry"])
     as_attachment = (request.args.get("download", "").lower() == "true") or is_mobile
 
-    return send_from_directory(
+    response = send_from_directory(
         docs_dir,
         "Biswajeet_Pradhan_Resume.pdf",
         mimetype="application/pdf",
         as_attachment=as_attachment,
         download_name="Biswajeet_Pradhan_Resume.pdf"
     )
+    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    response.headers["Pragma"] = "no-cache"
+    response.headers["Expires"] = "0"
+    return response
 
 
 @app.route("/health")

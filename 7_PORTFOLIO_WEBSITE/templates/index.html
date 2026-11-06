@@ -83,7 +83,7 @@
             <a href="#projects" class="btn btn-secondary">
               Projects
             </a>
-            <a href="{{ url_for('static', filename='docs/Biswajeet_Pradhan_Resume.pdf') }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline resume-btn" id="resume-btn">
+            <a href="{{ url_for('static', filename='docs/Biswajeet_Pradhan_Resume.pdf') }}?v={{ resume_version or '2.0' }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline resume-btn" id="resume-btn">
               <i class="fa-regular fa-file-pdf"></i> Resume / Background
             </a>
           </div>
