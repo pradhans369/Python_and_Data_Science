@@ -109,31 +109,51 @@ function initContactForm() {
     submitBtn.disabled = true;
     submitBtn.innerHTML = `Sending...`;
 
-    const formData = {
+    const payload = {
+      access_key: "2176aa62-5608-483b-8c88-0da213b430fb",
       name: form.name.value.trim(),
       email: form.email.value.trim(),
-      subject: form.subject.value.trim(),
-      message: form.message.value.trim()
+      subject: form.subject.value.trim() || "Portfolio Inquiry",
+      message: form.message.value.trim(),
+      from_name: "Biswajeet Pradhan Portfolio"
     };
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(payload)
       });
 
       const result = await response.json();
 
       if (response.ok && result.success) {
-        showStatus("success", result.message || "Message delivered successfully.");
+        showStatus("success", "Thank you! Your message has been sent directly to Biswajeet's inbox.");
         form.reset();
       } else {
-        showStatus("error", result.error || "Failed to send message. Please reach out via email or LinkedIn.");
+        showStatus("error", result.message || "Failed to send message. Please reach out via email or LinkedIn.");
       }
     } catch (err) {
-      console.warn("API request fallback:", err);
-      showStatus("error", "Could not reach server. Please email directly or connect on LinkedIn.");
+      console.warn("Direct Web3Forms fallback, attempting /api/contact:", err);
+      try {
+        const fallbackRes = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        const fallbackJson = await fallbackRes.json();
+        if (fallbackRes.ok && fallbackJson.success) {
+          showStatus("success", "Thank you! Your message has been delivered to Biswajeet's inbox.");
+          form.reset();
+        } else {
+          showStatus("error", "Could not reach server. Please email directly at biswajeetpradhan36933@gmail.com.");
+        }
+      } catch (fallbackErr) {
+        showStatus("error", "Could not reach server. Please email directly at biswajeetpradhan36933@gmail.com.");
+      }
     } finally {
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalText;

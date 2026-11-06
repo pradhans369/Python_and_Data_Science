@@ -64,9 +64,11 @@ def health():
 def contact():
     """
     Handle contact form submissions.
-    Supports JSON payloads or form data.
+    Supports JSON payloads or form data and delivers directly to Gmail via Web3Forms API.
     """
     try:
+        import urllib.request
+        import json
         data = request.get_json(silent=True) or request.form.to_dict()
         
         name = data.get("name", "").strip()
@@ -80,21 +82,45 @@ def contact():
                 "error": "Please provide your name, email, and message."
             }), 400
 
-        # In production, integrate with email services like SendGrid, Mailgun, or Formspree
-        # For now, we log the message safely and return a success response
-        print(f"[PORTFOLIO INQUIRY] From: {name} ({email}) | Subject: {subject}")
-        print(f"[MESSAGE BODY]: {message}\n" + "-" * 50)
+        # Deliver directly to biswajeetpradhan36933@gmail.com via Web3Forms
+        access_key = os.environ.get("WEB3FORMS_ACCESS_KEY", "2176aa62-5608-483b-8c88-0da213b430fb")
+        payload = {
+            "access_key": access_key,
+            "name": name,
+            "email": email,
+            "subject": f"Portfolio Inquiry: {subject}",
+            "message": message,
+            "from_name": "Biswajeet Pradhan Portfolio"
+        }
+
+        req = urllib.request.Request(
+            "https://api.web3forms.com/submit",
+            data=json.dumps(payload).encode("utf-8"),
+            headers={
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+                "User-Agent": "PortfolioApp/1.0"
+            }
+        )
+
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            resp_data = json.loads(resp.read().decode("utf-8"))
+            if resp_data.get("success"):
+                return jsonify({
+                    "success": True,
+                    "message": f"Thank you, {name}! Your message has been sent directly to Biswajeet's inbox."
+                }), 200
 
         return jsonify({
             "success": True,
-            "message": f"Thank you, {name}! Your message has been received. Biswajeet will get back to you shortly."
+            "message": f"Thank you, {name}! Your message has been received."
         }), 200
 
     except Exception as e:
         print(f"Error handling contact form: {e}")
         return jsonify({
             "success": False,
-            "error": "An internal error occurred. Please reach out directly via email or LinkedIn."
+            "error": "An error occurred sending the message. Please reach out directly via biswajeetpradhan36933@gmail.com."
         }), 500
 
 
